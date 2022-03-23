@@ -1,0 +1,35 @@
+.postInfo{
+    background-color: #595959;
+    display: flex;
+}
+.postImage{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}
+.postText{
+    background-color: #595959;
+    padding: 10px;
+    
+}
+.postBG{
+    background-color: #595959;
+}
+.ellipsis{
+    width: 25px;
+    height: 25px;
+}
+.button{
+    cursor: pointer;
+    margin-left: 250px;
+    border: none;
+    background-color: #595959;
+}
+.link{
+    color: white;
+    text-decoration: none;
+}
+.link:hover{
+    color: white;
+    text-decoration: underline;
+}

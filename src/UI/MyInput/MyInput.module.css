@@ -1,0 +1,16 @@
+.myInput{
+    box-sizing: border-box;
+    background-color: #595959;
+    display: block;
+    width: 85%;
+    min-height: 100px;
+    max-height: none;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    line-height: 1.5;
+    font-size: 23px;
+    color: #fff;
+    margin-left: 10px;
+    resize: none;
+}

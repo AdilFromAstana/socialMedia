@@ -1,0 +1,25 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.registrationText{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    align-items: center;
+}
+.registrationForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input{
+    margin-top: 10px;
+    outline: none;
+    padding: 5px 10px;
+    width: 270px;
+    height: 35px;
+}

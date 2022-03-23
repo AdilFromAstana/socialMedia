@@ -1,0 +1,14 @@
+.content{
+    position: absolute;
+    width: 990px;
+    margin: 0px auto;
+    top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.contentLogin{
+    width: 990px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,28 @@
+.navbar{
+    background-color: #595959;
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+}
+.link:active,
+.link:hover,
+.link{  
+    text-decoration: none;
+    color: #fff;
+}
+.link{
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+}
+.link:hover{
+    background-color: gray;
+    transition: 1s;
+}
+.img{
+    width: 20px;
+    height: 20px;
+}
+.linkText{
+    margin-left: 10px;
+}

@@ -1,0 +1,30 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.form{
+    padding: 20px;
+    background-color: lightslategray;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.input{
+    outline: none;
+    padding: 5px 10px;
+    width: 270px;
+    height: 35px;
+    margin-bottom: 10px;
+}
+.button{
+    height: 35px;
+    width: 100px;
+}
+.loginTitle{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}

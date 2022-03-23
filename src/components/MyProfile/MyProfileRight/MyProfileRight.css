@@ -1,0 +1,59 @@
+.content{
+    position: absolute;
+    color: #fff;
+    width: 525px;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+}
+.info{
+    background-color: #595959;
+    width: 525px;
+    padding: 15px 20px;
+}
+.mainInfo{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.otherInfo{
+    padding-top: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+.oneOfInfo{
+    line-height: 150%;
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    font-size: 19px;
+}
+.answear{
+    color: #fff;
+}
+.question{
+    color: #888888;
+}
+.countInfo{
+    display: flex;
+    justify-content: space-around;
+}
+.countI{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.photoInfo{
+    margin: 20px 0;
+    background-color: #595959;
+    width: 525px;
+    padding: 15px 20px;
+}
+.photoCount{
+    display: flex;
+    justify-content: space-between;
+}

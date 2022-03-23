@@ -1,0 +1,39 @@
+.form{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.comAuthor{
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.comPhoto{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.sendComImg{
+    width: 25px;
+    height: 25px;
+}
+.sendComBtn{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background-color: #595959;
+    border: none;
+}
+.textCom{
+    cursor: default;
+    color: #fff;
+    background-color: gray;
+    padding: 5px 10px;
+    outline: none;
+    border: 0;
+    width: 400px;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,16 @@
+.emptyDialogListImg{
+    width: 200px;
+    height: 200px;
+}
+.emptyDialogList{
+    background-color: #595959;
+    padding: 50px 0;
+    margin: 15px 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.emptyDialogListTitle{
+    margin-top: 10px;
+}

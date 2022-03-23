@@ -1,0 +1,37 @@
+.anyUser{
+    width: 525px;
+    background-color: #595959;
+    display: flex;
+    padding: 10px;
+    border-top: 2px solid black;
+}
+
+.photo{
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}
+
+.infoBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50px;
+    padding-left: 20px;
+    color: white;
+}
+
+.userName{
+    cursor: pointer;
+}
+
+.userName:hover{
+    text-decoration: underline;
+}
+
+.writeMessage{
+    cursor: pointer;
+}
+.writeMessage:hover{
+    text-decoration: underline;
+}

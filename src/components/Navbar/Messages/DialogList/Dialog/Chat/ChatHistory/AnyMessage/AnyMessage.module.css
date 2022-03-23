@@ -1,0 +1,24 @@
+.message{
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+}
+.messageTitle{
+    margin-left: 10px;
+}
+.authorImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.authorLinkName{
+    cursor: pointer;
+    text-decoration: none;
+    color: gray;
+}
+.authorLinkName:hover{
+    text-decoration: underline;
+}
+.messageText{
+    font-size: 13px;
+}

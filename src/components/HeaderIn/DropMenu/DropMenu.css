@@ -1,0 +1,63 @@
+.menuDown{
+    font-size: 16px;
+    border: 1px solid black;
+    color: #fff;
+    width: 150px;
+    height: 76px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #595959;
+    top: 50px;
+    right: 0;
+    position: absolute;
+    display: none;
+}
+.menuDownActive{
+    font-size: 16px;
+    border: 1px solid black;
+    color: #fff;
+    width: 150px;
+    height: 76px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #595959;
+    top: 50px;
+    right: 0;
+    position: absolute;
+    display: flex;
+}
+.menuSettings{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s ease-in-out;
+}
+.menuSettings:hover{
+    background-color: gray;
+    transition: 1s ease-in-out;
+}
+.menuOut{
+    cursor: pointer;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: none;
+    background-color: #595959;
+    transition: 1s ease-in-out;
+}
+.menuOut:hover{
+    background-color: gray;
+    transition: 1s ease-in-out;
+}
+.visible{
+    display: block;
+}
+.unvisible{
+    display: none;
+}

@@ -1,0 +1,22 @@
+.form{
+    background-color: #595959;
+    min-height: 180px;
+    max-height: none;
+    color: #fff;
+    position: relative;
+    border-radius: 4px;
+}
+.content{
+    background: inherit;
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 15px;
+    margin: 0 5px;
+    height: inherit;
+}
+.authorImage{
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

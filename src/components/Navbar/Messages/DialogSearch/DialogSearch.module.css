@@ -1,0 +1,11 @@
+.dialogSearch{
+    background-color: #595959;
+    display: flex;
+}
+.searchInput{
+    display: flex;
+}
+.searchImg{
+    width: 25px;
+    height: 25px;
+}

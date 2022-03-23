@@ -1,0 +1,11 @@
+.bgImg{
+    background: url(./../../../icons/logoBg.gif) no-repeat;
+    box-shadow: 0px 0px 10px black;
+    width: 100%;
+    height: auto;
+}
+.img{
+    margin: 50px;
+    width: 400px;
+    height: 400px;
+}

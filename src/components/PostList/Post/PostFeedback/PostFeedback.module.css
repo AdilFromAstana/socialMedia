@@ -1,0 +1,37 @@
+.feedbackAll{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    background-color: #595959;
+}
+.feedback{
+    user-select: none;
+    padding: 0 10px;
+    background-color: #595959;
+    display: flex;
+}
+.likes{
+    margin: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    background: #222226;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 32px;
+}
+.likes:active, /* активная/посещенная ссылка */
+.likes:hover,  /* при наведении */
+.likes {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+.views{
+    display: flex;
+    align-items: center;
+    background-color: #595959;
+}
+.img{
+    width: 25px;
+    height: 25px;
+}

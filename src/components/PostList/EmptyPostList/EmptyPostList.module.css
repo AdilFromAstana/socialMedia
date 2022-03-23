@@ -1,0 +1,21 @@
+.wrap{
+    margin: 20px 0;
+    background-color: #595959;
+}
+.content{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img{
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+}
+.text{
+    margin-top: 10px;
+    opacity: 0.5;
+    color: black;
+}

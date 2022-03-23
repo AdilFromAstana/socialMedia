@@ -1,0 +1,70 @@
+.imgProfile{
+    margin: 15px 0 auto;
+    height: 200px;
+    width: 200px;
+}
+.content{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+}
+.friends_list{
+    background-color: #595959;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.friend_profile{
+    background-color: #595959;
+    margin: 5px 0;
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+}
+.imgIcons{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.friends_text{
+}
+.textToChange{
+    opacity: 1;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 5px 45px;
+    margin: 15px;
+}
+.textToChange:hover{
+    transition: 1s;
+    opacity: 0.5;
+}
+.friends_content{
+    padding: 10px;
+    background-color: #595959;
+    margin: 20px 0;
+}
+.friend_name{
+    background-color: #595959;
+    display: flex;
+    justify-content: center;
+}
+.photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #595959;
+}

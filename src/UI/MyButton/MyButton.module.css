@@ -1,0 +1,16 @@
+.myBtn{
+    border-radius: 4px;
+    color: #fff;
+    height: 30px;
+    padding: 0 10px;
+    margin: 15px 20px;
+    font-size: 14px;
+    background: gray;
+    
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

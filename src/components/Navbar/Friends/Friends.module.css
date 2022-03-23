@@ -1,0 +1,10 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 795px;
+    position: relative;
+}
+.content{
+    position: absolute;
+    padding-bottom: 10px;
+}

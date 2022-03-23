@@ -1,0 +1,34 @@
+.content{
+    display: flex;
+    justify-content: space-between ;
+    width: 795px;
+    position: relative;
+}
+.linksList{
+    right: 0;
+    position: absolute;
+    background-color: #595959;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.posts{
+    position: absolute;
+    left: 0;
+    width: 525px;
+}
+.a:hover{
+    background-color: gray;
+    transition: 1s;
+}
+.a:hover,
+.a:active,
+.a{
+    cursor: pointer;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    text-decoration: none;
+    color: #fff;
+}
