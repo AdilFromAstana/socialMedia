@@ -13,7 +13,7 @@ const PostList = () => {
     const user = useSelector(state=>state.userAuth.user)
 
     const removePost = (post) => {
-        if(post.authorId == user.id){
+        if(post.user.id === user.id){
             let remove = AuthService.deletePost(post._id)
             dispatch({type: 'REMOVE_POST', payload: post._id})
         } else {

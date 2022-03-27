@@ -13,8 +13,8 @@ export default class AuthService{
         return $api.post('/logout')
     }
 
-    static async posts(anyPost, author, authorId){
-        return $api.post('/posts', {anyPost, author, authorId})
+    static async posts(anyPost, user){
+        return $api.post('/posts', {anyPost, user})
     }
 
     static async postComment(postId, commentValue, commentAuthor, commentAuthorId){

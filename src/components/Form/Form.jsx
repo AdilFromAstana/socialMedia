@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { Link } from 'react-router-dom';
 import MyButton from './../../UI/MyButton/MyButton';
@@ -8,22 +8,18 @@ import AuthService from "../../service/AuthService";
 
 const Form = () => {
 
-    const userInfo = useSelector(state=>state.userInfo);
-    const anyPost = useSelector(state=>state.post.post);
-
-    const authorName = useSelector(state=>state.userAuth.user.name);
-    const authorSurname = useSelector(state=>state.userAuth.user.surname);
-    const author = authorName + ' ' + authorSurname;
-    const authorId = useSelector(state=>state.userAuth.user.id);
+    const user = useSelector(state=>state.userAuth.user);
+    const anyPost = useSelector(state=>state.post.post.anyPost);
 
     const dispatch = useDispatch();
 
-    const createPost = async (e, anyPost, author, authorId) => {
+    const createPost = async (anyPost, user) => {
         try {
-            e.preventDefault()
-            const response = await AuthService.posts(anyPost, author, authorId);
-            console.log(response);
-            dispatch({type: 'ADD_POSTS', payload: anyPost});
+            await AuthService.posts(anyPost, user);
+            dispatch({type: 'ADD_POSTS', payload: {
+                anyPost: anyPost, 
+                user: user
+            }});
             dispatch({type: 'POST', payload: ''});
         } catch (e) {
             console.log(e)
@@ -35,7 +31,7 @@ const Form = () => {
             <div className={classes.content}>
                 <Link to='/profile'>
                     <img 
-                        src={userInfo.photo}
+                        src={`http://localhost:5000/${user.img}`}
                         className={classes.authorImage}
                         alt="profile photo"
                     />
@@ -47,8 +43,8 @@ const Form = () => {
                     placeholder='Что у вас нового?'
                 />
                 </div>
-            <hr style={{border: 'none' ,height: '1px', background: 'gray'}}/>
-            <MyButton onClick={(e)=>createPost(e, anyPost, author, authorId)}>
+            <hr style={{border: 'none', height: '1px', background: 'gray'}}/>
+            <MyButton onClick={()=>createPost(anyPost, user)}>
                 Опубликовать
             </MyButton>
       </form>

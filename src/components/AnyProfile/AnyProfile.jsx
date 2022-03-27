@@ -17,7 +17,7 @@ const AnyProfile = () => {
 
     return (
         <div className={classes.content}>
-            <AnyProfileLeft/>
+            <AnyProfileLeft user={user}/>
             <AnyProfileRight user={user} id={id} />
         </div>
     );

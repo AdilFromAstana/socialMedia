@@ -7,12 +7,10 @@ const MyProfileLeft = () => {
 
 const userInfo = useSelector(state=>state.userAuth.user)
 
-console.log(userInfo.img)
-
     return (
         <div className={classes.content}>
             <div className={classes.photo}>
-                <img src={'http://localhost:5000/' + userInfo.img} className={classes.imgProfile} alt="profile photo"/>
+                <img src={`http://localhost:5000/${userInfo.img}`} className={classes.imgProfile} alt="profile photo"/>
                 <div className={classes.textToChange}>Редактировать</div>
             </div>
                 <div className={classes.friends_content}>

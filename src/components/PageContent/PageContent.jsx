@@ -17,9 +17,8 @@ import AnyProfile from "../AnyProfile/AnyProfile";
 const PageContent = () => {
 
     const userAuth = useSelector(state=>state.userAuth);
-    const isLoading = useSelector(state => state.userAuth.isLoading);
 
-    if(isLoading){
+    if(userAuth.isLoading){
         return (
             <div>Загрузка...</div>
         )

@@ -7,19 +7,19 @@ const ProfileSettings = () => {
 
     const [active, setActive] = useState(false);
 
-    const userInfo = useSelector(state=>state.userAuth.user);
+    const user = useSelector(state=>state.userAuth.user);
     const dispatch = useDispatch();
 
-    const editInfo = async(userInfo) => {
+    const editInfo = async(user) => {
         try {
             let addInfo = {
-                name: userInfo.name,
-                surname: userInfo.surname,
-                id: userInfo.id,
-                img: userInfo.img,
+                name: user.name,
+                surname: user.surname,
+                id: user.id,
+                img: user.img,
             }
             dispatch({type: 'LOGIN_USER', payload: addInfo})
-            let response = await UserService.updateUser(addInfo.name, addInfo.surname, addInfo.id, addInfo.img)
+            await UserService.updateUser(addInfo.name, addInfo.surname, addInfo.id, addInfo.img)
         } catch (error) {
             console.log(error)
         }
@@ -31,11 +31,11 @@ const ProfileSettings = () => {
             <div className={classes.profile}>
                 <img
                     onClick={()=>setActive(!active)}
-                    src={userInfo.photo} 
+                    src={`http://localhost:5000/${user.img}`} 
                     alt='Ваша аватарка'
                     className={classes.profilePhoto}
                 />
-                <div className={active ? classes.unModal : classes.modal}>
+                <div className={!active ? classes.unModal : classes.modal}>
                     <label 
                         className={classes.modalButton}
                         htmlFor='files'
@@ -45,14 +45,14 @@ const ProfileSettings = () => {
                             style={{display: 'none'}}
                             id='files'
                             type="file"
-                            onChange={(e)=>editInfo({...userInfo, img: e.target.files[0]})}
+                            onChange={(e)=>editInfo({...user, img: e.target.files[0]})}
                         />
                     </label>
                     <p className={classes.modalButton}>Удалить аватарку</p>
                 </div>
                 <div className={classes.profileText}>
-                    <div>{userInfo.name}</div>
-                    <div>{userInfo.surname}</div>
+                    <div>{user.name}</div>
+                    <div>{user.surname}</div>
                 </div>
             </div>
             <div className={classes.infoForm}>
@@ -63,8 +63,8 @@ const ProfileSettings = () => {
                     <input
                         className={classes.input}
                         type="text" 
-                        value={userInfo.name}
-                        onChange={(e)=>editInfo({...userInfo, name: e.target.value})}
+                        value={user.name}
+                        onChange={(e)=>editInfo({...user, name: e.target.value})}
                     />
                 </div>
                 <div className={classes.anyForm}>
@@ -74,8 +74,8 @@ const ProfileSettings = () => {
                     <input
                         className={classes.input}
                         type="text" 
-                        value={userInfo.surname}
-                        onChange={(e)=>editInfo({...userInfo, surname: e.target.value})}
+                        value={user.surname}
+                        onChange={(e)=>editInfo({...user, surname: e.target.value})}
                     />
                 </div>
                 {/*<div className={classes.anyForm}>
@@ -104,13 +104,13 @@ const ProfileSettings = () => {
                     <input
                         className={classes.input}
                         type="text" 
-                        value={userInfo.id}
-                        onChange={(e)=>editInfo({...userInfo, id: e.target.value})}
+                        value={user.id}
+                        onChange={(e)=>editInfo({...user, id: e.target.value})}
                     />
                 </div>
                 <button
                     className={classes.button}
-                    onClick={()=>editInfo(userInfo)}
+                    onClick={()=>editInfo(user)}
                 > 
                     Сохранить
                 </button>

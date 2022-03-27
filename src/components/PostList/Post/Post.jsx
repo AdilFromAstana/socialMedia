@@ -6,7 +6,7 @@ import classes from './Post.module.css';
 import PostComments from './PostComments/PostComments';
 import { useState } from 'react';
 
-const Post = ({post, removePost, user}) => {
+const Post = ({post, removePost}) => {
 
     const [comCount, setComCount] = useState(0);
     const [comShow, setComShow] = useState(false);

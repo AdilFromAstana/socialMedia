@@ -6,20 +6,18 @@ import trash from './../../../../icons/trash.png';
 
 const PostInfo = ({post, removePost}) => {
 
-    const photo = useSelector(state => state.userInfo.photo);
-
     return (
         <div className={classes.postInfo}>
-            <Link to={`/${post.authorId}`}>
+            <Link to={`/${post.user.id}`}>
                 <img
-                    src={photo}
+                    src={`http://localhost:5000/${post.user.img}`}
                     className={classes.postImage}
                     alt="Аватар юзера"
                 />
             </Link>
             <div className={classes.postText}>
-                <Link to={`/${post.authorId}`} className={classes.link}>
-                    <strong className={classes.postBG}>{post.author}</strong>
+                <Link to={`/${post.user.id}`} className={classes.link}>
+                    <strong className={classes.postBG}>{post.user.name} {post.user.surname}</strong>
                     <br/> 
                 </Link>
                 <div className={classes.postBG}>Сегодня в 22:00</div>

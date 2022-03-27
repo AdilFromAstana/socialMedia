@@ -1,15 +1,12 @@
 import React from 'react';
-import {useSelector} from "react-redux";
 import classes from "./AnyProfileLeft.module.css";
 
-const AnyProfileLeft = () => {
-
-    const userInfo = useSelector(state=>state.userInfo)
+const AnyProfileLeft = ({user}) => {
 
     return (
         <div className={classes.content}>
             <div className={classes.photo}>
-                <img src={userInfo.photo} className={classes.imgProfile} alt="profile photo"/>
+                <img src={`http://localhost:5000/${user.img}`} className={classes.imgProfile} alt="profile photo"/>
                 <div className={classes.textToChange}>Редактировать</div>
             </div>
             <div className={classes.friends_content}>

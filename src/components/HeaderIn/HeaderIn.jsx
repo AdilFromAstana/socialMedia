@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 
 const HeaderIn = () => {
 
-const userInfo = useSelector(state=>state.userInfo)
+const userInfo = useSelector(state=>state.userAuth.user)
 
 const [active, setActive] = useState(false);
 
@@ -21,7 +21,7 @@ const [active, setActive] = useState(false);
                     <span className={classes.logoText}>торғай</span>
                 </Link>
                 <button className={classes.profile} onClick={()=>setActive(!active)}>
-                    <img src={userInfo.photo} alt="" className={classes.profileImg} />                
+                    <img src={`http://localhost:5000/${userInfo.img}`} alt="" className={classes.profileImg} />                
                     <img src={arrow} alt="" className={classes.profileMore}/>
                 </button>
                 <DropMenu active={active}/>
