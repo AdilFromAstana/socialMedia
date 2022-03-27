@@ -19,6 +19,7 @@ const App = () => {
             localStorage.setItem('token', response.data.accessToken);
             dispatch({type: 'LOGIN_AUTH', payload: true});
             dispatch({type: 'LOGIN_USER', payload: response.data.user});
+            console.log(response)
             navigate('/main')
         } catch (e) {
             console.log(e.response);

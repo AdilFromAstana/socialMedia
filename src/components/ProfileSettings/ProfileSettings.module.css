@@ -5,6 +5,7 @@
     width: 800px;
     font-size: 20px;
     padding: 20px 0;
+    box-sizing: border-box;
 }
 .h1{
     display: flex;
@@ -12,16 +13,40 @@
 }
 .profile{
     display: flex;
+    align-items: center;
     width: 600px;
     margin-top: 10px;
     margin: 0 auto;
+    position: relative;
 }
 .profilePhoto{
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    margin-right: 15px;
+}
+.profilePhoto:hover{
+    cursor: pointer;
+}
+.modal{
+    position: absolute;
+    left: -75px;
+    bottom: -75px;
+    background: #fff;
+}
+.unModal{
+    display: none;
+}
+.modalButton{
+    cursor: pointer;
+    transition: 1s;
+}
+.modalButton:hover{
+    transition: 1s;
+    background-color: gray;
 }
 .profileText{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
     color: #fff;
 }

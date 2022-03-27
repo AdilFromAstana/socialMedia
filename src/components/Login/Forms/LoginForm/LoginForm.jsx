@@ -15,7 +15,6 @@ const LoginForm = () => {
         try{
             const response = await AuthService.login(email, password);
             localStorage.setItem('token', response.data.accessToken);
-            console.log(response.data.user)
             dispatch({type: 'LOGIN_AUTH', payload: true})
             dispatch({type: 'LOGIN_USER', payload: response.data.user})
             navigate('/main')

@@ -3,8 +3,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './DropMenu.css'
 import DropModal from './DropModal/DropModal';
-import AuthService from "../../../service/AuthService";
-import {useDispatch} from "react-redux";
 
 const DropMenu = ({active}) => {
 

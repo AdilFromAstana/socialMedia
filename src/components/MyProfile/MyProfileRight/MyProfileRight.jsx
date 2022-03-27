@@ -11,10 +11,6 @@ const MyProfileRight = () => {
     
     const [posts, setPosts] = useState([]);
 
-    const removePost = (post) => {
-        setPosts(posts.filter(p => p.id !== post.id))
-    }
-
     const dispatch = useDispatch();
 
     async function getAllPosts(){
