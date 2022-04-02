@@ -10,7 +10,6 @@ export default class UserService{
     }
 
     static async getUserPosts(id){
-        console.log(id)
         return $api.get('/getUserPosts/' + id, {id})
     }
 

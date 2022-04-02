@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from "./AnyProfileLeft.module.css";
 
-const AnyProfileLeft = ({user}) => {
+const AnyProfileLeft = ({anyUser}) => {
 
     return (
         <div className={classes.content}>
             <div className={classes.photo}>
-                <img src={`http://localhost:5000/${user.img}`} className={classes.imgProfile} alt="profile photo"/>
+                <img src={`http://localhost:5000/${anyUser.img}`} className={classes.imgProfile} alt="profile photo"/>
                 <div className={classes.textToChange}>Редактировать</div>
             </div>
             <div className={classes.friends_content}>

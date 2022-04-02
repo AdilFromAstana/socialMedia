@@ -30,7 +30,7 @@ const PostComments = ({
             e.preventDefault();
             const response = await AuthService.postComment(postId, commentValue, commentAuthor, commentAuthorId);
             setComments([...comments, { ...commentValue, id: Date.now() }]);
-            setCommentValue({commentValue: ''});
+            setCommentValue('');
             setComCount(comCount+1)
         }
     }

@@ -7,18 +7,24 @@ import {fetchOneDevice} from "../../http/fetchOneDevice";
 
 const AnyProfile = () => {
 
-    const [user, setUser] = useState({info: []});
+    const [anyUser, setAnyUser] = useState({info: [], isLoading: true});
 
     const {id} = useParams();
 
     useEffect(() => {
-        fetchOneDevice(id).then(data=>setUser(data))
+        fetchOneDevice(id).then(data=>setAnyUser(data))
     }, []);
+
+    if(anyUser.isLoading){
+        return (
+            <div>Загрузка...</div>
+        )
+    }
 
     return (
         <div className={classes.content}>
-            <AnyProfileLeft user={user}/>
-            <AnyProfileRight user={user} id={id} />
+            <AnyProfileLeft anyUser={anyUser}/>
+            <AnyProfileRight anyUser={anyUser} id={id} />
         </div>
     );
 };

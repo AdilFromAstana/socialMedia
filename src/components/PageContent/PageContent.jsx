@@ -1,6 +1,5 @@
 import React from 'react';
-import {Route, Routes, Navigate, useNavigate} from 'react-router-dom';
-import MyProfile from './../MyProfile/MyProfile';
+import {Route, Routes, Navigate} from 'react-router-dom';
 import Navbar from './../Navbar/Navbar';
 import classes from './PageContent.module.css';
 import Messages from '../Navbar/Messages/Messages';
@@ -8,7 +7,7 @@ import ProfileSettings from '../ProfileSettings/ProfileSettings';
 import Login from '../Login/Login';
 import HeaderIn from '../HeaderIn/HeaderIn';
 import HeaderEntry from '../HeaderEntry/HeaderEntry';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import Main from '../Navbar/Main/Main';
 import Chat from '../Navbar/Messages/DialogList/Dialog/Chat/Chat';
 import Friends from "../Navbar/Friends/Friends";
@@ -35,7 +34,6 @@ const PageContent = () => {
                 <Route path='/messages' element={<Messages/>}/>
                 <Route path='/messages/:id' element={<Chat/>}/>
                 <Route path='/friends' element={<Friends/>}/>
-                <Route path='/profile' element={<MyProfile/>}/>
                 <Route path='/:id' element={<AnyProfile/>}/>
                 <Route path='*' element={<Navigate to='/main'/>}/>
                 <Route path='/profileSettings' element={<ProfileSettings/>}/>

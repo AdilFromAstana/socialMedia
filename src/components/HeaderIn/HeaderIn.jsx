@@ -14,7 +14,7 @@ const userInfo = useSelector(state=>state.userAuth.user)
 const [active, setActive] = useState(false);
 
     return (
-        <div className={classes.content}>
+        <div className={classes.content} handleclick={()=>setActive(false)}>
             <div className={classes.header}>
                 <Link to='/main'className={classes.logo}>
                     <img className={classes.imgLogo} src={logo} alt="" />

@@ -16,4 +16,3 @@ export const userAuth = (state = defaultState, action) => {
             return state
     }
 }
-

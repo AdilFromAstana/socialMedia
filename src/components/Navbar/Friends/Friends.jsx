@@ -11,17 +11,26 @@ const Friends = () => {
     const users = useSelector(state=>state.usersList.users)
 
     async function getUsers(){
+        dispatch({type: 'USERS_LOADING', payload: true})
         try {
-            const response = await UserService.fetchUsers()
+            let response = await UserService.fetchUsers()
             dispatch({type: 'USERS', payload: response.data})
         } catch (e) {
             console.log(e)
+        } finally {
+            dispatch({type: 'USERS_LOADING', payload: false})
         }
     }
 
     useEffect(()=> {
         getUsers()
     }, [])
+
+    if(users.isLoading){
+        return (
+            <div>Загрузка...</div>
+        )
+    }
 
     return (
         <div className={classes.wrapper}>

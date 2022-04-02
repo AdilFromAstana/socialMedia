@@ -1,13 +1,17 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import PostList from "../../PostList/PostList";
+import Form from "../../Form/Form";
 import {useDispatch, useSelector} from "react-redux";
 import UserService from "../../../service/UserService";
 import classes from './AnyProfileRight.module.css';
-import { posts } from '../../../store/posts';
 
-const AnyProfileRight = ({user, id}) => {
+const AnyProfileRight = ({anyUser, id}) => {
+
+    const user = useSelector(state=>state.userAuth.user)
 
     const dispatch = useDispatch();
+
+    const posts = useSelector(state=>state.posts.posts)
 
     async function getUserPosts(){
         try {
@@ -18,7 +22,7 @@ const AnyProfileRight = ({user, id}) => {
         }
     }
 
-    const userName = `${user.name} ${user.surname}`
+    const userName = `${anyUser.name} ${anyUser.surname}`
 
     useEffect(()=> {
         getUserPosts()
@@ -37,7 +41,7 @@ const AnyProfileRight = ({user, id}) => {
                         <div className={classes.question}>Родной город</div>
                         <div className={classes.answear}>Степногорск</div>
                     </div>
-                    <div className='oneOfInfo'>
+                    <div className={classes.oneOfInfo}>
                         <div className={classes.question}>Родной язык</div>
                         <div className={classes.answear}>Русский язык</div>
                     </div>
@@ -64,6 +68,12 @@ const AnyProfileRight = ({user, id}) => {
                     <div className={classes.allP}>Показать все</div>
                 </div>
             </div>
+            {user.id === id
+            ?
+                <Form/>
+            :
+                ''
+            }
             <PostList/>
         </div>
     );

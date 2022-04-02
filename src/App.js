@@ -15,7 +15,7 @@ const App = () => {
     const checkAuth = async () => {
         dispatch({type: 'LOGIN_LOADING', payload: true})
         try {
-            const response = await axios.get(`${API_URL}/refresh`, {withCredentials: true});
+            let response = await axios.get(`${API_URL}/refresh`, {withCredentials: true});
             localStorage.setItem('token', response.data.accessToken);
             dispatch({type: 'LOGIN_AUTH', payload: true});
             dispatch({type: 'LOGIN_USER', payload: response.data.user});

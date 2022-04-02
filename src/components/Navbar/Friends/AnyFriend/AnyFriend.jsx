@@ -5,8 +5,6 @@ import {useNavigate} from "react-router-dom";
 
 const AnyFriend = ({user}) => {
 
-    const userData = useSelector(state=>state.userList.Diana);
-
     const router = useNavigate();
 
     return (
@@ -14,7 +12,7 @@ const AnyFriend = ({user}) => {
             <img
                 onClick={() => router(`/${user._id}`)}
                 className={classes.photo}
-                src={userData.photo}
+                src={`http://localhost:5000/${user.img}`}
                 alt="userPhoto"
             />
             <div className={classes.infoBlock}>
