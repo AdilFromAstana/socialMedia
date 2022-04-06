@@ -3,6 +3,9 @@
     height: 200px;
     width: 200px;
 }
+.imgProfile:hover{
+    cursor: pointer;
+}
 .content{
     overflow: hidden;
     position: absolute;
@@ -36,8 +39,6 @@
     background-color: #fff;
     display: flex;
     justify-content: center;
-}
-.friends_text{
 }
 .textToChange{
     opacity: 1;

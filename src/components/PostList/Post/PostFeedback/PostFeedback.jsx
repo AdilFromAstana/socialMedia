@@ -18,26 +18,29 @@ const PostFeedback = ({comCount, comShow ,setComShow}) => {
         <div className={classes.feedbackAll}>
             <div className={classes.feedback}>
                 <div onClick={addLike} className={classes.likes}>
-                    <img className={classes.img} src={likes}/>
+                    <img className={classes.img} src={likes} alt={likes}/>
                     <div style={{padding: '0 5px'}}>
                         {like}
                     </div>
                 </div>
                 <div onClick={()=>setComShow(!comShow)} className={classes.likes}>
-                    <img className={classes.img} src={comments}/>
+                    <img className={classes.img} src={comments} alt={comments}/>
                     <div style={{padding: '0 5px'}}>
                         {comCount}
                     </div>
                 </div>
                 <div className={classes.likes}>
-                    <img className={classes.img} src={repost}/>
+                    <img className={classes.img} src={repost} alt={repost}/>
                     <div style={{padding: '0 5px'}}>
                         1
                     </div>
                 </div>
             </div>
             <div className={classes.views}>
-                <img style={{backgroundColor: '#595959',width:'25px', height:'25px'}} src={visible}/><div style={{backgroundColor: '#595959', padding: '0 5px', display: 'flex', alignItems: 'center'}}>102</div>
+                <img style={{backgroundColor: '#595959',width:'25px', height:'25px'}} src={visible} alt={visible}/>
+                    <div style={{backgroundColor: '#595959', padding: '0 5px', display: 'flex', alignItems: 'center'}}>
+                        102
+                    </div>
             </div>
         </div>
     );

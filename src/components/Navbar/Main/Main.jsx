@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import Form from '../../Form/Form';
 import PostList from '../../PostList/PostList';
 import classes from './Main.module.css'
@@ -22,7 +22,7 @@ const Main = () => {
 
     useEffect(()=> {
         getAllPosts()
-    }, [])
+    })
 
     return (
         <div className={classes.content}>

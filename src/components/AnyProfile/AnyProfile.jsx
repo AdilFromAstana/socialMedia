@@ -4,8 +4,11 @@ import AnyProfileRight from "./AnyProfileRight/AnyProfileRight";
 import AnyProfileLeft from "./AnyProfileLeft/AnyProfileLeft";
 import {useParams} from "react-router-dom";
 import {fetchOneDevice} from "../../http/fetchOneDevice";
+import Modal from '../Modal/Modal';
 
 const AnyProfile = () => {
+
+    const [modal, setModal] = useState(false)
 
     const [anyUser, setAnyUser] = useState({info: [], isLoading: true});
 
@@ -23,8 +26,9 @@ const AnyProfile = () => {
 
     return (
         <div className={classes.content}>
-            <AnyProfileLeft anyUser={anyUser}/>
-            <AnyProfileRight anyUser={anyUser} id={id} />
+            <AnyProfileLeft anyUser={anyUser} modal={modal} setModal={setModal}/>
+            <AnyProfileRight anyUser={anyUser} id={id} modal={modal} setModal={setModal}/>
+            <Modal modal={modal} setModal={setModal}/>
         </div>
     );
 };

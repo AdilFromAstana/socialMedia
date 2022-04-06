@@ -28,7 +28,7 @@ const PostComments = ({
             e.preventDefault();
         } else {
             e.preventDefault();
-            const response = await AuthService.postComment(postId, commentValue, commentAuthor, commentAuthorId);
+            await AuthService.postComment(postId, commentValue, commentAuthor, commentAuthorId);
             setComments([...comments, { ...commentValue, id: Date.now() }]);
             setCommentValue('');
             setComCount(comCount+1)
@@ -40,7 +40,7 @@ const PostComments = ({
         setComCount(comCount-1)
     }
 
-    if(comShow === true){
+    if(comShow){
         return(
             <div className={classes.wrapper}>
                 <div className={classes.commentList}>

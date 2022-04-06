@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './PostContent.module.css';
-import {useSelector} from "react-redux";
 
 const PostContent = ({post}) => {
 

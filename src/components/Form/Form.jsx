@@ -30,7 +30,7 @@ const Form = () => {
         <form className={classes.form}>
             <div className={classes.content}>
                 <Link to={`/${user.id}`}>
-                    <img 
+                    <img
                         src={`http://localhost:5000/${user.img}`}
                         className={classes.authorImage}
                         alt="profile photo"

@@ -1,6 +1,5 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import classes from './AnyFriend.module.css';
-import {useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
 
 const AnyFriend = ({user}) => {

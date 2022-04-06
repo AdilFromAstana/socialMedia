@@ -1,12 +1,17 @@
 import React from 'react';
 import classes from "./AnyProfileLeft.module.css";
 
-const AnyProfileLeft = ({anyUser}) => {
+const AnyProfileLeft = ({anyUser, modal, setModal}) => {
 
     return (
         <div className={classes.content}>
             <div className={classes.photo}>
-                <img src={`http://localhost:5000/${anyUser.img}`} className={classes.imgProfile} alt="profile photo"/>
+                <img 
+                    onClick={() => setModal(true)}
+                    src={`http://localhost:5000/${anyUser.img}`} 
+                    className={classes.imgProfile} 
+                    alt="profile photo"
+                />
                 <div className={classes.textToChange}>Редактировать</div>
             </div>
             <div className={classes.friends_content}>

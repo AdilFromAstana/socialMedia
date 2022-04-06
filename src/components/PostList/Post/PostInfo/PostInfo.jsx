@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import classes from './PostInfo.module.css';
 import trash from './../../../../icons/trash.png';

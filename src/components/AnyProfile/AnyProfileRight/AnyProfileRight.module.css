@@ -46,13 +46,22 @@ h1{
     justify-content: center;
     flex-direction: column;
 }
-.photoInfo{
+.imgInfo{
     margin: 20px 0;
     background-color: #595959;
-    width: 525px;
     padding: 15px 20px;
 }
-.photoCount{
+.allImg{
+    margin-top: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.anyImg{
+    margin: 5px;
+    height: 110px;
+    width: 110px;
+}
+.anyImg:hover{
+    cursor: pointer;
 }

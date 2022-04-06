@@ -7,13 +7,9 @@ const DropModal = ({modal, setModal}) => {
 
     const dispatch = useDispatch();
 
-    const isFalse = () => {
-        dispatch({type: 'false'})
-    }
-
     const logout = async () => {
         try {
-            const response = await AuthService.logout();
+            let response = await AuthService.logout();
             localStorage.removeItem('token');
             dispatch({type: 'LOGIN_AUTH', payload: false});
             dispatch({type: 'LOGIN_USER', payload: {}});
@@ -32,7 +28,7 @@ const DropModal = ({modal, setModal}) => {
         return(
             <div></div>
         )
-    }else{
+    }
         return (
             <div className={classes.modal}>
                 <div className={classes.content}>
@@ -44,7 +40,6 @@ const DropModal = ({modal, setModal}) => {
                 </div>
             </div>
         );
-    }
 };
 
 export default DropModal;

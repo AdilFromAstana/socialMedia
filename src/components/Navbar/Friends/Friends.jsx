@@ -24,7 +24,7 @@ const Friends = () => {
 
     useEffect(()=> {
         getUsers()
-    }, [])
+    })
 
     if(users.isLoading){
         return (

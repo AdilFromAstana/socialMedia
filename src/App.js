@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import { BrowserRouter, useNavigate } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './App.css'
 import PageContent from './components/PageContent/PageContent';
 import axios from "axios";

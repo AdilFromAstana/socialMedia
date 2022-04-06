@@ -5,17 +5,17 @@ import {useDispatch, useSelector} from "react-redux";
 import UserService from "../../../service/UserService";
 import classes from './AnyProfileRight.module.css';
 
-const AnyProfileRight = ({anyUser, id}) => {
+const AnyProfileRight = ({anyUser, id, modal, setModal}) => {
 
     const user = useSelector(state=>state.userAuth.user)
 
-    const dispatch = useDispatch();
-
     const posts = useSelector(state=>state.posts.posts)
+
+    const dispatch = useDispatch();
 
     async function getUserPosts(){
         try {
-            let posts = await UserService.getUserPosts(id)
+            let posts = await UserService.getUserPosts(id);
             dispatch({type: 'USER_POSTS', payload: posts.data});
         } catch (e) {
             console.log(e)
@@ -62,10 +62,22 @@ const AnyProfileRight = ({anyUser, id}) => {
                     </div>
                 </div>
             </div>
-            <div className={classes.photoInfo}>
-                <div className={classes.photoCount}>
-                    <div className={classes.countP}>Мои фото 1</div>
-                    <div className={classes.allP}>Показать все</div>
+            <div className={classes.imgInfo}>
+                <div className={classes.imgCount}>
+                    {user.id === id 
+                    ? 
+                        <span>Мои фото</span>
+                    :
+                        <span>Фотографии {anyUser.name}</span>
+                    }
+                </div>
+                <div className={classes.allImg}>
+                    <img 
+                        onClick={() => setModal(true)}
+                        className={classes.anyImg}
+                        src={`http://localhost:5000/${anyUser.img}`} 
+                        alt="" 
+                    />
                 </div>
             </div>
             {user.id === id
